@@ -1,0 +1,122 @@
+public class BitwiseDemo {
+    public static void main(String[] args) {
+        int a = 5;  // Binary: 0101
+        int b = 3;  // Binary: 0011
+
+        System.out.println("a & b = " + (a & b));  // 0101 & 0011 = 0001 (1)
+        System.out.println("a | b = " + (a | b));  // 0101 | 0011 = 0111 (7)
+        System.out.println("a ^ b = " + (a ^ b));  // 0101 ^ 0011 = 0110 (6)
+        System.out.println("~a = " + (~a));        // ~0101 = 1010 (in 2's complement → -6)
+
+        System.out.println("a << 1 = " + (a << 1)); // 0101 << 1 = 1010 (10)
+        System.out.println("a >> 1 = " + (a >> 1)); // 0101 >> 1 = 0010 (2)
+        System.out.println("a >>> 1 = " + (a >>> 1));// 0101 >>> 1 = 0010 (2)
+    }
+}
+RELATIONAL OPERATOR
+import java.util.Scanner;
+
+public class RelationalOperatorDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Taking input from user
+        System.out.print("Enter first number (a): ");
+        int a = sc.nextInt();
+        
+        System.out.print("Enter second number (b): ");
+        int b = sc.nextInt();
+
+        // Applying relational operators
+        System.out.println("a == b : " + (a == b));   // equal to
+        System.out.println("a != b : " + (a != b));   // not equal to
+        System.out.println("a > b  : " + (a > b));    // greater than
+        System.out.println("a < b  : " + (a < b));    // less than
+        System.out.println("a >= b : " + (a >= b));   // greater than or equal to
+        System.out.println("a <= b : " + (a <= b));   // less than or equal to
+
+        sc.close(); // Good practice to close scanner
+    }
+}
+BITWISE OPERATOR
+import java.util.Scanner;
+
+public class ShiftOperatorDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input number
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        // Input shift amount
+        System.out.print("Enter number of positions to shift: ");
+        int shift = sc.nextInt();
+
+        // Performing shift operations
+        int leftShift = num << shift;
+        int rightShift = num >> shift;
+        int unsignedRightShift = num >>> shift;
+
+        // Printing results
+        System.out.println("\nOriginal number: " + num);
+        System.out.println("Binary: " + Integer.toBinaryString(num));
+        System.out.println();
+
+        System.out.println("After left shift (" + num + " << " + shift + ") = " + leftShift);
+        System.out.println("Binary: " + Integer.toBinaryString(leftShift));
+
+        System.out.println("\nAfter signed right shift (" + num + " >> " + shift + ") = " + rightShift);
+        System.out.println("Binary: " + Integer.toBinaryString(rightShift));
+
+        System.out.println("\nAfter unsigned right shift (" + num + " >>> " + shift + ") = " + unsignedRightShift);
+        System.out.println("Binary: " + Integer.toBinaryString(unsignedRightShift));
+
+        sc.close();
+    }
+}
+SWAP 
+import java.util.Scanner;
+
+public class SwapWithTemp {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number (a): ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number (b): ");
+        int b = sc.nextInt();
+
+        System.out.println("Before swap: a = " + a + ", b = " + b);
+
+        // Swapping using temporary variable
+        int temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After swap: a = " + a + ", b = " + b);
+        sc.close();
+    }
+}
+TERNARY
+import java.util.Scanner;
+
+public class TernaryExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number (a): ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number (b): ");
+        int b = sc.nextInt();
+
+        // Ternary operator to find the maximum
+        int max = (a > b) ? a : b;
+
+        System.out.println("Maximum is: " + max);
+        sc.close();
+    }
+}
+
