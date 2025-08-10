@@ -1,0 +1,27 @@
+UNARY OPERATOR
+  public class UnaryOperatorDemo {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = -a; // Unary minus
+        int c = +a; // Unary plus (same as a)
+        
+        System.out.println("Original a: " + a);
+        System.out.println("Unary minus (-a): " + b);
+        System.out.println("Unary plus (+a): " + c);
+
+        System.out.println("Post-increment (a++): " + (a++)); // Prints 5, then a becomes 6
+        System.out.println("After post-increment, a: " + a);
+
+        System.out.println("Pre-increment (++a): " + (++a)); // a becomes 7, then prints 7
+
+        boolean flag = false;
+        System.out.println("Logical NOT (!flag): " + (!flag)); // true
+
+        int x = 10;
+        System.out.println("Bitwise complement (~x): " + (~x)); // -(x+1)
+
+        double d = 3.7;
+        int casted = (int)d; // Type cast from double to int
+        System.out.println("Type cast double to int: " + casted);
+    }
+}
