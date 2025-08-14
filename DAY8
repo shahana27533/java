@@ -1,0 +1,240 @@
+DAY8
+CONSOVERLOADING:
+public class consoverloading {
+			int age;
+			String name;
+			consoverloading(int a, String str)
+			{
+				age=a;
+				name=str;
+				System.out.println("aarav");
+			}
+			void display()
+			{
+				System.out.println(age +""+ name);
+			}
+			consoverloading(float b)
+			{
+				System.out.println(b);
+			}
+
+			public static void main(String[] args)
+			{
+				{
+					constructer obj=new constructer (19,"priya");
+					obj.display();
+				}
+					}
+}
+
+
+CONSTRUCTOR:
+package day8;
+public class constructer {
+			int age;
+			String name;
+			constructer(int a, String str)
+			{
+				age=a;
+				name=str;
+				System.out.println("aarav");
+			}
+			void display()
+			{
+				System.out.println(age +""+ name);
+			}
+			public static void main(String[] args)
+			{
+				constructer obj=new constructer (7,"aarav");
+				obj.display();
+			}
+		}
+
+
+DAD:
+package day8;
+public class dad {
+			void property()
+			{
+				System.out.println("House,Lands,money");
+			}
+			class son extends dad
+			{
+				void show()
+				{
+					System.out.println("Bike");
+				}
+				
+			}
+			public static void main(String[] args) 
+			{
+				dad obj=new dad();
+				obj.property();
+			}
+}
+
+
+CLASS OOOPS:
+package day8;
+public class ooops {
+	String tripplace="wayanad";
+	String triporganizer="Thirishika";
+	int budget=50000;
+	String sponser="swetha";
+	String hotel="taj";
+	public static void main(String[] args) {
+		oops obj=new oops();
+		System.out.println("obj1.triporganizer");
+		oops obj1=new oops();
+		System.out.println("obj2.tripplace");
+		oops obj2=new oops();
+		System.out.println("obj3.budget");
+		oops obj3=new oops();
+		
+		obj1.price=50;
+		obj1.hotel="taj";
+		System.out.println(obj.price);
+		System.out.println(obj.hotel);
+	}
+}
+
+
+CLASS OOPS:
+package day8;
+public class oops {
+	String hotel="maaran";
+	String food="parotta";
+	int price=20;
+		public static void main(String[] args) {
+		oops obj=new oops();
+		System.out.println(obj.hotel);
+		oops obj1=new oops();
+		System.out.println(obj1.price);
+		obj1.price=50;
+		obj1.hotel="Maaran";
+		System.out.println(obj.price);
+		System.out.println(obj.hotel);
+		}
+}
+
+
+PRACTICE:
+package day8;
+public class practice {
+	int rollno=55;
+	String name="priya";
+	static String college="zion";
+	void display(int a,String name)
+	{
+		System.out.println(a + " "+ name +" " + college + " ");
+	}
+	public static void main(String[] args) {
+		practice obj = new practice();
+		System.out.println(obj.rollno);
+		System.out.println(practice.college);
+		practice.college=("zoho");
+		obj.display(55,"priya");
+		}
+}
+
+
+SHOWDISPLAY:
+package day8;
+public class showdisplay {
+    	void display()
+		{
+			System.out.println("Hii display");
+		}
+		void show()
+		{
+			System.out.println("hii show");
+			this.display();
+		}
+		public static void main(String[] args) 
+				{
+			showdisplay obj=new showdisplay();
+			obj.show();
+		}
+}
+
+
+STAT:
+package day8;
+public class stat {
+		int rollno = 1;
+		String name = "hari";
+		static String collegename= "zion";
+		void display(int a,String name)
+		{
+			System.out.println(a + " "+ name +" " + collegename + " ");
+		}
+ 		public static void main(String[] args) {
+			stat obj = new stat();
+			System.out.println(obj.rollno);
+			System.out.println(stat.collegename);
+			obj.display(1,"hari");
+			obj.display(2, "priya");
+			obj.display(3, "bala");
+			obj.display(4,"karthick");
+			}
+		}
+
+
+STATIC BLOCK:
+package day8;
+public class staticblock {
+		static
+		{
+			System.out.println("haripriya");
+			
+		}
+		public static void main(String[] args) {
+			System.out.println("be happy with what you have");
+		}
+}
+
+
+STATMETHOD:
+package day8;
+public class statmethod {
+	int empid=96;
+	String name="ramjanu";
+	static String collegename="zion";
+	void display(int a,String name)
+	{
+		System.out.println(a + " "+ name +" " + collegename + " ");
+	}
+	public static void show(int a)
+	{
+		statmethod.collegename="mountzion";
+		System.out.println(a+ ""+collegename);
+	}
+	public static void main(String[] args)
+	{
+		statmethod.show(96);
+		statmethod obj =new statmethod();
+		obj.display(99,"ramjanu");
+	}
+}
+
+
+THIS KEYWORD:
+package day8;
+public class thiskeyword {
+	int age;
+	String name;
+		thiskeyword(int age, String name)
+	{
+		this.age=age;
+		this.name=name;
+	}
+	void display()
+	{
+		System.out.println(age +""+ name);
+	}
+  public static void main(String[] args) 
+	{
+		thiskeyword obj=new thiskeyword (19,"priya");
+		obj.display();
+		}
+}
